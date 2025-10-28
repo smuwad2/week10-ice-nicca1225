@@ -12,7 +12,7 @@
 
         computed: {
             imgLoc(){
-                return `assets/${this.mood}.png`
+                return `/assets/${this.mood.toLowerCase()}.png`
             }
         }
     }
@@ -21,8 +21,8 @@
 
 <template>
     <!-- TODO: add your template code here. Use boostrap card --> 
-    <div class = "card">
-         <img :src="imgLoc" class="card-img-top" >
+    <div class = "card" style = "width: 18rem">
+         <img :src="imgLoc" class="card-img-top"  >
          <div class = "card-body">
             <h5 class = "card-title">{{ subject }}</h5>
             <p>{{  entry  }}</p>
